@@ -55,7 +55,7 @@ const entries = [
     placeholder:"enter your password",
     label:"Password",
     error: "error! password should be 8-15 characcters and include at least a special character.",
-    pattern:`^(?=.[0-9](?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$ `,
+    pattern:`^(?=.[0-9](?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$`,
     required: true,
   },
   {

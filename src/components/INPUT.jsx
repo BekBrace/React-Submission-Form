@@ -20,7 +20,7 @@ const INPUT = (props) => {
         name={props.name}
         placeholder={props.placeholder}/> */}
       <label>{label}</label>
-      <input {...entryProps} onChange={onChange} onBlur={handleFocus} focus={focus.toString()} />
+      <input {...entryProps} onChange={onChange} onBlur={handleFocus} focus={focus.toString()} onFocus={() => entryProps.name === "confirmPassword" && setFocus(true)}/>
       {/* react_devtools_backend.js:4026 Warning: Received `true` for a non-boolean attribute `focus`.
       If you want to write it to the DOM, pass a string instead: focus="true" or focus={value.toString()}. */}
       <span>{error}</span>
