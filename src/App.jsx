@@ -10,7 +10,7 @@ function App() {
   // useRef is used, if you don't want to re-render stuff
   const usernameRef = useRef();
 
-  
+  // handleSubmit method to refresh the page  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(usernameRef)
