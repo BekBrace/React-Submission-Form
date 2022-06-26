@@ -4,6 +4,7 @@ import INPUT from './components/INPUT';
 
 import { useRef, useState } from 'react';
 
+// import pic from '../src/assets/pic.jpg';
 
 function App() {
   // useState is used to re-render
@@ -67,13 +68,14 @@ const entries = [
   }
   console.log(values)
   return (
-    <div className="app">
+    <div className="app"> 
       <form onSubmit={handleSubmit}>
         {/* <INPUT placeholder="username" setUsername ={setUsername}/> */}
         {/* <INPUT refer={usernameRef} placeholder="username" /> */}
         {/* <INPUT name= "username" placeholder="username" />
         <INPUT name= "email" placeholder="email" />
         <INPUT name= "password" placeholder="password" /> */}
+        <h1>Apply Now!</h1>
         {entries.map((entry) => (
           <INPUT key={entry.id} {...entry} 
             value={values[entry.name]} 
