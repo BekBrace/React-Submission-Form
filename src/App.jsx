@@ -25,28 +25,48 @@ const entries = [
     name:"username",
     type:"text",
     placeholder:"enter your username",
-    label:"Username"
+    label:"Username",
+    error: "error! username should be 3-16 characters and no special characters.",
+    required: true,
+    pattern: "^[A-Za-z0-9]{3,16}$" // regex for determining 3 to 16 letters 
   },
   {
     id:2,
     name:"email",
-    type:"text",
+    // type:"text",
+    type: "email",
     placeholder:"enter your email",
-    label:"E-Mail"
+    label:"E-Mail",
+    error: "error! please enter a valid email.",
+    required: true,
   },
   {
     id:3,
-    name:"password",
-    type:"text",
-    placeholder:"enter your password",
-    label:"Password"
+    name:"birthday",
+    type:"date",
+    placeholder:"enter your birth date",
+    label:"Birthday",
+    required: true,
   },
   {
     id:4,
+    name:"password",
+    type:"text",
+    placeholder:"enter your password",
+    label:"Password",
+    error: "error! password should be 8-15 characcters and include at least a special character.",
+    pattern:`^(?=.[0-9](?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$ `,
+    required: true,
+  },
+  {
+    id:5,
     name:"confirmPassword",
     type:"text",
     placeholder:"Confirm your pswd",
-    label:"Confirm"
+    label:"Confirm",
+    error: "error! password do not match. please try again.",
+    required: true,
+    pattern: values.password,
   }
 ]
 
